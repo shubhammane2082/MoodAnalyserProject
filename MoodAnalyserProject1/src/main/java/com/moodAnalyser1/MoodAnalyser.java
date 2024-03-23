@@ -13,8 +13,10 @@ public class MoodAnalyser
 	public String AnalyseMood() throws MoodAnalyserException
 	{
 		try{
-			if( message == null || message.isEmpty())
+			if( message == null || message.isEmpty()) 
+			{
 				throw new MoodAnalyserException("Invalid Mood...");
+			}
 		}catch(MoodAnalyserException e) {
 			return e.getMessage();
 		}
