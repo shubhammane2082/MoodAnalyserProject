@@ -7,7 +7,7 @@ import org.junit.Test;
 public class MoodAnalyserTestCase {
 	
 	@Test
-	public void SadtestforAnalyseMoodwithconstructor() {
+	public void SadtestforAnalyseMoodwithconstructor() throws MoodAnalyserException {
 		MoodAnalyser Analyser=new  MoodAnalyser("I am in sad Mood now");
 		String result=Analyser.AnalyseMood();
 		String expectedResult="SAD";
@@ -15,18 +15,17 @@ public class MoodAnalyserTestCase {
 	}
 	
 	@Test
-	public void HappytestforAnalyseMoodwithconstructor() {
+	public void HappytestforAnalyseMoodwithconstructor() throws MoodAnalyserException {
 		MoodAnalyser Analyser=new  MoodAnalyser("I am in happy Mood now");
 		String result=Analyser.AnalyseMood();
 		String expectedResult="HAPPY";
 		assertEquals(expectedResult, result);
 	}
 	@Test
-	public void checkMoodNull() {
+	public void checkMoodNull() throws MoodAnalyserException {
 		MoodAnalyser Analyser=new  MoodAnalyser(null);
 		String result=Analyser.AnalyseMood();
-		System.out.println(result);
-		String expectedResult="HAPPY";
+		String expectedResult="Invalid Mood...";
 		assertEquals(expectedResult, result);
 	}
 }
