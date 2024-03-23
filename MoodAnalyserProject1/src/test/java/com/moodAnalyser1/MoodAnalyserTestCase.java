@@ -23,7 +23,7 @@ public class MoodAnalyserTestCase {
 	}
 	@Test
 	public void checkMoodNull() throws MoodAnalyserException {
-		MoodAnalyser Analyser=new  MoodAnalyser(null);
+		MoodAnalyser Analyser=new  MoodAnalyser();
 		String result=Analyser.AnalyseMood();
 		String expectedResult="Invalid Mood...";
 		assertEquals(expectedResult, result);
