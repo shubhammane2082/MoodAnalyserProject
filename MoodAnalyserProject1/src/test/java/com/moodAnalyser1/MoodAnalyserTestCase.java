@@ -13,5 +13,12 @@ public class MoodAnalyserTestCase {
 		String expectedResult="SAD";
 		assertEquals(expectedResult, result);
 	}
+	
+	@Test
+	public void HappytestforMoodAnalyser() {
+		String result=Analyser.AnalyseMood("I am in happy mood now");
+		String expectedResult="HAPPY";
+		assertEquals(expectedResult, result);
+	}
 
 }
