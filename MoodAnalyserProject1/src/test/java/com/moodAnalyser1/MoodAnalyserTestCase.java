@@ -21,4 +21,12 @@ public class MoodAnalyserTestCase {
 		String expectedResult="HAPPY";
 		assertEquals(expectedResult, result);
 	}
+	@Test
+	public void checkMoodNull() {
+		MoodAnalyser Analyser=new  MoodAnalyser(null);
+		String result=Analyser.AnalyseMood();
+		System.out.println(result);
+		String expectedResult="HAPPY";
+		assertEquals(expectedResult, result);
+	}
 }

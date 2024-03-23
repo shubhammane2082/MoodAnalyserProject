@@ -12,6 +12,12 @@ public class MoodAnalyser
 	}
 	public String AnalyseMood() 
 	{
+		try{
+			if(message == null)
+				throw new NullPointerException("Invalid Mood...");
+		}catch(Exception e) {
+			return "HAPPY";
+		}
 		if(message.contains("sad")) {
 			return "SAD";
 		}
