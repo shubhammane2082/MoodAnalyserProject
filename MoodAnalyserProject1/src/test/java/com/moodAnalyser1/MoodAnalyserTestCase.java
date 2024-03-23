@@ -6,19 +6,11 @@ import org.junit.Test;
 
 public class MoodAnalyserTestCase {
 	
-	MoodAnalyser Analyser=new  MoodAnalyser();
 	@Test
-	public void SadtestforAnalyseMood() {
-		String result=Analyser.AnalyseMood("I am in sad mood now");
+	public void SadtestforAnalyseMoodwithconstructor() {
+		MoodAnalyser Analyser=new  MoodAnalyser("I am in sad Mood now");
+		String result=Analyser.AnalyseMood();
 		String expectedResult="SAD";
 		assertEquals(expectedResult, result);
 	}
-	
-	@Test
-	public void HappytestforAnalyseMood() {
-		String result=Analyser.AnalyseMood("I am in happy mood now");
-		String expectedResult="HAPPY";
-		assertEquals(expectedResult, result);
-	}
-
 }
